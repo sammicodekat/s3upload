@@ -1,5 +1,5 @@
 const Bucket = 'image-upload-codinghouse-test';
-const AWS_BASE = 'https://s3.amazonaws.com';
+const AWS_URL_BASE = 'https://s3.amazonaws.com';
 const mongoose = require('mongoose');
 const uuid = require('uuid');
 const path = require('path');
@@ -23,7 +23,7 @@ const imageSchema = new mongoose.Schema({
 
 imageSchema.statics.upload = function (fileObj) {
   return new Promise((resolve, reject) => {
-    let {buffer, originalname} = fileObj;
+    let { buffer, originalname } = fileObj;
     let Key = uuid() + path.extname(originalname);
     let params = {
       Bucket,

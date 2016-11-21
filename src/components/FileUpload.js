@@ -34,7 +34,7 @@ export default class FileUpload extends Component {
           <input type='file' onChange={this.onFileSelect} required/>
           <button>Upload</button>
         </form>
-        { imagePreviewUrl && <img src={imagePreviewUrl} />}
+        { imagePreviewUrl && <img className="preview" src={imagePreviewUrl} />}
       </div>
     )
   }

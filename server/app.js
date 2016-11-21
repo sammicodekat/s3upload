@@ -1,5 +1,6 @@
 const PORT = process.env.PORT || 8000;
 const MONGO_URI = process.env.MONGODB_URI || 'mongodb://localhost/image-upload';
+require('dotenv').config({ silent: true })
 const bodyParser = require('body-parser');
 const express = require('express');
 const http = require('http');
